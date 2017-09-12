@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Christine Betts</title>
+        <link rel="stylesheet" href="style.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
+         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+                 <script src = "main.js"></script>
+        <script src='js/pdfobject.js'></script>
+        <script>
+        var options = {
+        pdfOpenParams: { view: 'FitB', scrollbar: '1', toolbar: '1', statusbar: '1', messages: '0' }
+        };
+
+        PDFObject.embed("resume.pdf", "#resumeP", options);
+        </script>
+
+
+    </head>
+    <body onload="go();">
+
+ 		<div id="head"></div>
+ 		<div id="nav"></div>
+    <nav>
+        <ul>
+            <li><a href="#about" class="active" id="about-link">Page 1</a></li>
+            <li><a href="#portfolio" id="portfolio-link">Page 2</a></li>
+            <li><a href="#resume" id="resume-link">Page 3</a></li>
+            <li><a href="#favorites" id="favorites-link">Page 4</a></li>
+        </ul>
+    </nav>
+
+ 		<div class = "container">
+   		<div id="portfolio" class="sections"></div>
+   		<div id="about" class="sections">
+   			<h1>about... me</h1>
+   			<div id="aboutin" class="about"></div>
+   			<div class="about">
+	   	   	<p class="site"><a href="http://blog.christinebetts.com" target="_blank">A blog I post to in waves</a></p>
+	   	   	</div>
+   			<div id="social" class="about">
+	   			<ul class="soc">
+					<li><a class="soc-twitter" href="https://twitter.com/bettsoff" target="_blank"></a></li>
+					<li><a class="soc-linkedin" href="https://www.linkedin.com/in/chrstn/" target="_blank"></a></li>
+					<li><a class="soc-mail" href="mailto:cmbetts0321@gmail.com" target="_blank"></a></li>
+					<li><a class="soc-github soc-icon-last" href="https://github.com/chrstnb" target="_blank"></a></li>
+				</ul>
+   			</div>
+   			<h1>about... this site</h1>
+   			<div class="about" id="aboutSi">
+   		</div>
+   		</div>
+   		<div id="resume" class="sections">
+   			<div id="resumeP"></div>
+   			<!-- <div id="res">
+   			</div> -->
+        <div class="about">
+        <div id="name"></div>
+        <div id="type"></div>
+        <div id="place"></div>
+        <div id="time"></div>
+        <div id="desc"></div>
+        </div>
+   		</div>
+   		<div id="favorites" class="sections"> 
+      </div>
+   		<div id="footer"></div>
+    </body>
+    <footer>
+        <script src='js/pdfobject.js'></script>
+        <script>
+        var options = {
+        pdfOpenParams: { view: 'FitB', scrollbar: '1', toolbar: '0', statusbar: '0', messages: '0' }
+        };
+
+        PDFObject.embed("resume.pdf", "#resumeP", options);
+        </script>
+    </footer>
+</html>
